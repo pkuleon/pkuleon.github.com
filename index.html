@@ -1,7 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
+	<head>
 		<title>Tim.Leon(pkuleon)</title>
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				var blog_url = "http://pku76.diandian.com/rss";
+				var blog_target = $("#blog");
+				
+				// YQL query (SELECT * from feed ... ) // Split for readability  
+				var req_url = "http://query.yahooapis.com/v1/public/yql?q=";
+					req_url += escape("SELECT * FROM feed WHERE url='" +blog_url+ "'");
+					req_url += "&format=json";
+				
+				$.getJSON(req_url, function(data) {
+					for (var i in data.query.results.item){
+						var item = data.query.results.item[i];
+						blog_target.append("<h4>"+item.title+"</h4>");
+						blog_target.append("<div class=\"item\">"+item.description+"</div>");
+					}
+				});
+				
+			});
+		
+		
+		</script>
 		<style>
 			body, html{
 				padding: 0;
@@ -12,7 +35,7 @@
 				padding: 30px;
 				font: 100 14px georgia;
 				color: #fff;
-				line-height: 150%;
+				line-height: 200%;
 			}
 			h1, h2, h3, h4{
 				color: white;
@@ -22,6 +45,10 @@
 			}
 			a{
 				color: #fff;
+			}
+			p{
+				margin: 0px;
+				padding: 0px;
 			}
 			.title {
 				font-size: 32px;
@@ -47,7 +74,12 @@
 			.clear{
 				clear:both
 			}
-			
+			#blog h4
+				margin: 0px;
+			}
+			#blog .item
+				margin: 0px;
+			}
 
 		</style>
 	</head>
@@ -71,9 +103,13 @@
 							<a href="https://github.com/pkuleon" target="_blank">@github</a> | @facebook | @linked-in <br>
 							@weibo
 						</p>
+						
+						<h3>Blog</h3>
+						<div id="blog"></div>
 					</div>
 				</div>
 				<div class="clear"></div>
+				
 			</div>
 		</div>
 		
