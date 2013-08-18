@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello, I'm Tim.Leon</title>
+<script src="http://m.baidu.com/static/as/js/jquery-1.6.2.min.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Raleway:300,700,900' rel='stylesheet' type='text/css'>
+<style>
+
+@charset "utf-8";
+
+/*
+*	Note : Css styles reset
+*/
+html {overflow-x: hidden; overflow-y: scroll;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,textarea,select,optgroup,option,fieldset,legend,p,blockquote,th,td{margin:0;padding:0;}
+fieldset,img {border: 0;}
+address,caption,cite,code,dfn,em,th,var,optgroup {font-style: normal;font-weight: normal;}
+ins {text-decoration: none;}
+li {list-style: none;}
+table {font-size:inherit;font:100%;}
+caption,th {text-align: left;}
+h1,h2,h3,h4,h5,h6 {font-size: 100%;}
+q:before,q:after {content:'';}
+abbr,acronym {border: 0;font-variant: normal;}
+legend {color: #000;}
+input,button,textarea,select,optgroup,option {font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;}
+input,button,textarea,select {margin:0;*font-size: 100%;line-height:1.2;}
+a img,img {border:0;-ms-interpolation-mode:bicubic;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{zoom:1;}
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary { display:block;}
+
+
+
+	html, body{
+		margin: 0;
+		padding: 0;
+		font: 300 14px Arial; /* Roboto Condensed */
+		overflow-x: hidden;
+	}
+	
+	h1,h2,h3,h4,h5,h6 {font-weight: 300;}
+	
+	h1{
+		font-size: 54px;
+		line-height: 55px;
+	}
+	h2{
+		font-size: 40px;
+		line-height: 55px;
+	}
+	h3{
+		font-size: 28px;
+		line-height: 40px;
+	}
+	
+	.left{
+		float: left;
+	}
+	
+	.right{
+		float: right;
+	}
+	
+	::selection { background-color: #fe0; color: #222; }
+	::-moz-selection { background-color: #fe0; color: #222; }
+	::-webkit-selection { background-color: #fe0; color: #222; }
+	
+	body::-webkit-scrollbar{  
+		height: 1ex;
+		width: 10px;
+		background: #333;
+	}
+	body::-webkit-scrollbar:hover {  
+		background: #333;
+	}
+	body::-webkit-scrollbar-thumb {  
+		background: #444;
+	}
+	body::-webkit-scrollbar-thumb:hover {  
+		background: #999;
+	}
+</style>
+
+</head>
+<body>
+	
+		<div class="nav">
+			<div class="menu clearfix">
+				<a href="/home" to="home" class="selected">home<b></b></a>
+				<a href="/code" to="code">code<b></b></a>
+				<a href="/design" to="design">design<b></b></a>
+				<a href="/about" to="about">about<b></b></a>
+				<a href="/contactme" to="contactme">contactme<b></b></a>
+			</div>
+		</div>
+		<div id="home" class="home section">
+			<div class="page clearfix">
+				<h1 class="left">I'm Coder, Designer<br>& Thinker</h1>
+				<div class="right">
+					<img class="avatar" src="http://m3.img.libdd.com/farm2/113/30A95ABD28C56A687A4FFEAA51D76871_337_337.PNG" >
+					<p>&nbsp;<br>Tim.Leon</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="code" class="code section">
+			<div class="page clearfix">
+				<h2>I focus on web development</h2>
+				<h3>javascript, as, html5, nodejs, python, redis, game framework, scalable, optimization</h3>
+				
+				<div class="left span1 clearfix">
+					<div class="count_round left">
+						<div class="count">8</div>
+						<p>years of exp</p>
+					</div>
+					<div class="count_round left">
+						<div class="count sup">50</div>
+						<p>projects</p>
+					</div>
+				</div>
+				
+				<div class="right span3">
+					<h5>(part of projects)</h5>
+					<div class="grid clearfix">
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+
+		<div id="design" class="design section">
+			<div class="page clearfix">
+				<h2>And also, I am a designer</h2>
+				<h3>specialising in web, mobile & and game design.</h3>
+				
+				<div class="left span1">
+					<h5>(part of projects)</h5>
+					<div class="grid clearfix">
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+					</div>
+				</div>
+				
+				<div class="right span3">
+					<h5>(work for brands)</h5>
+					<p><img src="bands.png"><p>
+					<p class="more">and more ...</p>
+				</div>
+			</div>
+		</div>
+		
+		<div id="about" class="about section">
+			<div class="page clearfix">
+				<h2>What about my career ?</h2>
+				<h3>I am looking for a <b style="font-weight:900">NEW JOB</b> now.</h3>
+				<div class="subway">
+					<div class="subway_bg">
+						<div class="pie"></div>
+						<div class="station s1" style="color:#fff">
+							<sub style="font-weight:700">Now</sub>
+							<p>look forward to your appreciation</p>
+							<span></span>
+						</div>
+						
+						<div class="station s2">
+							<sub>2011</sub>
+							<p>Sr. Developer Tecent Inc</p>
+							<span></span>
+						</div>
+						
+						<div class="station s3">
+							<sub>2009</sub>
+							<p>Co-founder Talentwalker</p>
+							<span></span>
+						</div>
+						
+						<div class="station s4">
+							<sub>2008</sub>
+							<p>Designer Microsoft</p>
+							<span></span>
+						</div>
+						
+						<div class="station s5">
+							<sub>2007</sub>
+							<p>Exchange Student NTU Singapore</p>
+							<span></span>
+						</div>
+						
+						<div class="station s6">
+							<sub>2005</sub>
+							<p>Student<br>Peking Univ</p>
+							<span></span>
+						</div>
+						
+						<div class="dot"></div>
+						<div class="line line_end"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+		
+		<div id="contactme" class="contactme section">
+			<div class="page clearfix">
+				<h2>You can find me at</h2>
+				<h3>email / @facebook / @weibo / @twitter / @github</h3>
+			</div>
+		</div>
+
+
+	<script>
+		$(document).ready(function(){
+			var window_height = $(window).height();
+			$('.section').css('height', $(window).height());
+			
+			$('.section .page').each(function(){
+				var page_height = $(this).height();
+				var padding_top = Math.ceil((window_height - page_height) / 2);
+				
+				$(this).css('padding-top', padding_top);
+			
+			});
+			
+			var last_page = 0;
+			$(window).scroll(function () {
+				//~ var scroll = $(this).scrollTop();
+				//~ if (scroll > 150) {
+					//~ $('#back_top').fadeIn();
+				//~ } else {
+					//~ $('#back_top').fadeOut();
+				//~ }
+				
+				var s = Math.ceil((window.scrollY+1) / window_height);
+				if (last_page != s){
+					$('.nav .menu a').removeClass('selected');
+					$($('.nav .menu a')[s-1]).addClass('selected');
+					//location.hash = $($('.nav .menu a')[s-1]).attr('href');
+				}
+				last_page = s;
+			});
+			
+			//~ $('#back_top').click(function () {
+				//~ $('body,html').animate({
+					//~ scrollTop: 0
+				//~ }, 800);
+				
+				//~ location.hash = '';
+				//~ return false;
+			//~ });
+			
+			$('.nav .menu a').bind('click',function(event){
+				event.preventDefault();
+				
+				var $anchor = $(this);
+				// if you don't want to use the easing effects:
+				var scroll = $('#'+$anchor.attr('to')).offset().top;
+				$('html, body').stop().animate({
+					scrollTop: scroll
+				}, 1000);
+				
+				$('.nav .menu a').removeClass('selected');
+				$anchor.addClass('selected');
+				
+				//location.hash = $anchor.attr('href');
+				
+				return false;
+			});
+
+
+			//~ var color = ['#20b74b', '#235eb0', '#d23d4f', '#e8993d'];
+			//~ $(window).scroll(function(){
+				//~ //console.log(window.scrollY);
+				//~ var s = Math.ceil(window.scrollY / window_height);
+				
+				//~ $('.nav').css('background', color[s-1]);
+			//~ });
+			
+		
+		});
+	
+	
+	</script>
+	<style>
+	
+	html, body{
+		font: 300 14px Raleway,Arial; /* Roboto Condensed */
+	}
+	
+	.page{
+		width: 960px;
+		margin: 0 auto;
+		color: #fff;
+	}
+	
+	.nav{
+		position: fixed;
+		width: 100%;
+		/*border-bottom: rgba(255,255,255,.3) 1px solid;*/
+		background: rgba(51,51,51,.4);
+	}
+	.nav .menu{
+		width: 960px;
+		margin: 0 auto;
+		height: 48px;
+	}
+	
+	.nav .menu a{
+		color: rgba(255,255,255,.6);
+		line-height: 48px;
+		font-size: 13px;
+		text-decoration: none;
+		display: block;
+		float: left;
+		width: 120px;
+		margin-right: 10px;
+		overflow-x: hidden;
+		position: relative;
+		transition: all 100ms ease-in-out;
+	}
+	.nav .menu a:hover,
+	.nav .menu a.selected{
+		color: #fff;
+		font-weight: 900;
+	}
+	
+	.nav a b {
+		display:block;
+		position: absolute;
+		left: 160px;
+		width:120px;
+		top: 46px;
+		height:2px;
+		background: #fff;
+		
+		transition: all 100ms ease-in-out;
+	}
+	.nav a:hover b,
+	.nav a.selected b {
+		left: 0px;
+	}
+
+	
+	.grid{
+		width: 500px;
+		hidth: 400px;
+	}
+	.grid .item{
+		width: 80px;
+		height: 80px;
+		padding: 10px 20px 10px 0px;
+		border-radius: 90%;
+		float: left;
+	}
+	.grid .item:before{
+		content:"";
+		display:block;
+		width: 80px;
+		height: 80px;
+		border-radius: 90%;
+		background: rgba(0,0,0,.3);
+	}
+	
+	.page h2{
+		font-weight: 700;
+		font-size: 40px;
+	}
+	
+	.home{
+		background: #20b74b
+	}
+	.home h1{
+		font-weight: 900;
+	}
+	.home .avatar{
+		width: 120px;
+		height: 120px;
+		border-radius: 100%;
+		opacity: .7
+	}
+	.home .left{
+		padding-top:120px
+	}
+	.home .right{
+		padding-top:100px;
+		width:200px;
+		text-align:center
+	}
+	
+	
+	.code{
+		background: #235eb0
+	}
+	.code .span1{
+		padding: 60px 50px 0px 0px;
+		font-size: 16px;
+	}
+	.code .count_round{
+		border: #46bcff 1px solid;
+		color: #46bcff;
+		border-radius: 100%;
+		text-align: center;
+		width: 140px;
+		height: 140px;
+		margin: 10px 20px 10px 0px;
+	}
+	.code .count_round .sup:after{
+		content: "+";
+		font-size: 30px;
+		line-height: 20px;
+	}
+	.code .count_round .count{
+		font-size: 60px;
+		line-height: 56px;
+		padding-top: 32px;
+	}
+	.code .count_round p{
+		font-size: 13px;
+	}
+	
+	.code .span3{
+		padding: 20px 20px 0px 0px;
+	}
+	.code .span3 h5{
+		text-align: center;
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+	
+	.design{
+		background: #d23d4f
+	}
+	
+	.design .span1{
+		padding: 60px 20px 0px 0px;
+	}
+	.design .span1 h5{
+		text-align: center;
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+	
+	.design .span3{
+		padding: 60px 0px 0px 0px;
+		width: 360px;
+	}
+	.design .span3 h5{
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+	.design .span3 p{
+		line-height: 30px;
+		color:#ff7a9e
+	}
+	.design .more{
+		padding-left: 220px;
+	}
+	
+	.about{
+		background: #ed8d38;
+	}
+	.subway{
+		height: 300px;
+		width: 960px;
+		position: relative;
+	}
+	.subway .line{
+		transition: all 800ms ease-in-out;
+		background-color: #fff;
+		height: 2px;
+		left: 960px;
+		top: 166px;
+		width: 2000px;
+		border-radius: 10px;
+		position: relative;
+	}
+	.subway .line_end{
+		left: 56px;
+	}
+	.subway_bg{
+		height: 300px;
+		width: 960px;
+		transition: all 800ms ease-in-out;
+	}
+	.subway .dot{
+		position: absolute;
+		width:  14px;
+		height: 14px;
+		border-radius: 100%;
+		background: #fff;
+		top: 160px;
+		left: 50px;
+		transition: all 200ms ease-in-out;
+	}
+
+	.subway .station{
+		position: absolute;
+		text-align: center;
+		width: 120px;
+		height: 120px;
+		cursor: pointer;
+		transition: all 200ms ease-in-out;
+		color:#ffd38e;
+	}
+	.subway .station:hover{
+		top: 70px;
+	}
+	
+	.subway .station p{
+		line-height: 110%;
+	}
+	.subway .station sub{
+		font-size: 30px;
+		line-height: 110%;
+	}
+	.subway .station span{
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		margin-top:20px;
+		background-color: #fff;
+		border-radius: 100%;
+		transition: all 200ms ease-in-out;
+	}
+	.subway .station:hover span{
+		margin-top:30px;
+	}
+	
+	.subway .s1{ left: 0px; top: 80px; }
+	.subway .s2{ left: 250px; top: 80px; }
+	.subway .s3{ left: 500px; top: 80px; }
+	.subway .s4{ left: 600px; top: 80px; }
+	.subway .s5{ left: 750px; top: 80px; }
+	.subway .s6{ left: 900px; top: 80px; }
+
+	.subway .s1:hover ~ .dot, .rotate_map_s1 ~ .dot{ left: 50px; }
+	.subway .s2:hover ~ .dot, .rotate_map_s2 ~ .dot{ left: 300px; }
+	.subway .s3:hover ~ .dot, .rotate_map_s3 ~ .dot{ left: 550px; }
+	.subway .s4:hover ~ .dot, .rotate_map_s4 ~ .dot{ left: 650px; }
+	.subway .s5:hover ~ .dot, .rotate_map_s5 ~ .dot{ left: 800px; }
+	.subway .s6:hover ~ .dot, .rotate_map_s5 ~ .dot{ left: 950px; }
+
+	.subway .pie{
+		opacity: .1;
+		border-radius: 100%;
+		background-color: rgba(32,32,32,.4);
+		width: 80px;
+		height: 80px;
+		position: absolute;
+		top: 128px;
+		left: 16px;
+		transition: all 200ms ease-in-out;
+	}
+
+
+	.rotate_map_s1, .rotate_map_s2, .rotate_map_s3, .rotate_map_s4, .rotate_map_s5{
+		transform: rotate(-45deg);
+	}
+
+	.contactme{
+		background: #8db030;
+	}
+	
+	</style>
+</body>
+</html>
