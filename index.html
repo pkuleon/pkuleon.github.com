@@ -2,11 +2,11 @@
 <html>
 <head>
 <title>Hello, I'm Tim.Leon</title>
-<script src="http://m.baidu.com/static/as/js/jquery-1.6.2.min.js"></script>
+<!--script src="http://m.baidu.com/static/as/js/jquery-1.6.2.min.js"></script-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <link href="http://fonts.googleapis.com/css?family=Raleway:100,300,700,900" rel="stylesheet" type="text/css">
-<link href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
-
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" href="http://sayang.sinaapp.com/static/timleon/images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="http://sayang.sinaapp.com/static/timleon/images/favicon.ico" type="image/x-icon">
 
@@ -241,7 +241,7 @@ article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,sec
 						}'
 						>
 							<div class="item_inner item_show">
-								<figure class="front"><h5>Kongfu River</h5><p>mobile game</p></figure>
+								<figure class="front"><h5>Kongfu River</h5><p>app game</p></figure>
 								<figure class="back"><img class="thumb" src="http://sayang.sinaapp.com/static/timleon/images/thumb_kongfu.jpg"></figure>
 							</div>
 						</div>
@@ -752,6 +752,7 @@ article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,sec
 	
 	html, body{
 		font: 300 14px Raleway,Arial; /* Roboto Condensed */
+		color: #fff;
 	}
 	
 	.page{
@@ -833,7 +834,7 @@ article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,sec
 		width: 100%;
 		height: 100%;
 		border-radius: 90%;
-		background: rgba(0,0,0,.3);
+		background: rgba(0,0,0,.4);
 	}
 	*/
 	.grid .item_inner { width:100%; height: 100%;
@@ -856,27 +857,83 @@ article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,sec
 		display:block;
 		pointer-events: none;
 	}
-	.grid .item_show { -webkit-transform: translateY( 0% ) rotateX( -180deg ); -moz-transform: translateY( 0% ) rotateX( -180deg ); -o-transform: translateY( 0%) rotateX( -180deg ); transform: translateY( 0% ) rotateX( -180deg );}
+	.grid .item_show { 
+	/*
+		-webkit-transform: translateY( 0% ) rotateX( -180deg );
+		-moz-transform: translateY( 0% ) rotateX( -180deg );
+		-o-transform: translateY( 0%) rotateX( -180deg );
+		transform: translateY( 0% ) rotateX( -180deg );
+		*/
+	}
 
 	.grid .item figure { 
 		-webkit-transition: all 0.3s ease-out;
 		-moz-transition: all 0.3s ease-out;
 		-o-transition: all 0.3s ease-out;
-		-ms-transition: all 0.3s ease-out; 
 		transition: all 0.3s ease-out;
 		
 		pointer-events: none; margin:0px; display: block; height: 100%; width: 100%; position: absolute; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -o-backface-visibility: hidden; backface-visibility: hidden;
 	}
-	.grid .item figure h5 { position: absolute; bottom: 50px; width: 100%}
-	.grid .item figure p { position: absolute; top: 50px; width: 100%; border-top: rgba(204,204,204,.2) 1px dotted}
+	.grid .item figure h5 { position: absolute; bottom: 44px; width: 100%}
+	.grid .item figure p { position: absolute; top: 60px; left:14%; right:14%; border-top: rgba(255,255,255,.2) 1px dotted}
 	
-	.grid .item .front { pointer-events: none; text-align:center; background: rgba(0,0,0,.3); border-radius: 90%; overflow:hidden; overflow:visible; }
+	.grid .item .front {
+		-webkit-transform: scale(1,1);
+		-moz-transform: scale(1,1);
+		-o-transform: scale(1,1);
+		transform: scale(1,1);
+		
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-o-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+		
+		pointer-events: none; text-align:center; background: rgba(0,0,0,.3); border-radius: 90%;
+		overflow:hidden;
+		____overflow:visible;
+	}
+	
 	.grid .item .front .text{ display:table-cell; vertical-align:middle; width:100px; height:100px }  
-	.grid .item .back {  pointer-events: none; border-radius: 90%; -webkit-transform: rotateX( 180deg ); -moz-transform: rotateX( 180deg ); -o-transform: rotateX( 180deg ); transform: rotateX( 180deg );}
+	.grid .item .back {
+		pointer-events: none;
+		border-radius: 90%;
+		/*
+		-webkit-transform: rotateX( 180deg );
+		-moz-transform: rotateX( 180deg );
+		-o-transform: rotateX( 180deg );
+		transform: rotateX( 180deg );
+		*/
+		
+		-webkit-transform: scale(1,1);
+		-moz-transform: scale(1,1);
+		-o-transform: scale(1,1);
+		transform: scale(1,1);
+		
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-o-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+	}
 	
 	.grid .item .front img { pointer-events: none; height: 100%; width: 100%; border-radius: 90%; opacity:.2; position: absolute; left:0}
-	.grid .item_show .front{ opacity: 0 }
-	.grid .item_flip .back{ opacity: 0 }
+	.grid .item_show .front{
+	
+		-webkit-transform: scale(1.25,1.25);
+		-moz-transform: scale(1.25,1.25);
+		-o-transform: scale(1.25,1.25);
+		transform: scale(1.25,1.25);
+		
+		opacity: 0
+	}
+	.grid .item_flip .back{
+	/*
+		-webkit-transform: scale(.25,.25);
+		-moz-transform: scale(.25,.25);
+		-o-transform: scale(.25,.25);
+		transform: scale(.25,.25);
+		*/
+		opacity: 0
+	}
 	.grid .item .back .thumb { pointer-events: none; height: 100%; width: 100%; border-radius: 90%; opacity:.8; }
 	.grid .item_flip {
 	}
@@ -1556,7 +1613,7 @@ article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,sec
 		right:12%;
 		bottom:15%;
 		margin:0 0 0 0;
-		background:#ffffff;
+		background:#f5f5f5 url(http://sayang.sinaapp.com//static/timleon/images/loading.gif) no-repeat center center;
 	}
 	#showcase .img-wrap .img-show img{
 		width: 100%;
