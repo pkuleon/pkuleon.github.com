@@ -455,38 +455,32 @@ article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,sec
 						<div class="line"></div>
 						
 						<div class="station s1" style="color:#fff">
-							<sub style="font-weight:700">Now</sub>
-							<p>look forward to your appreciation</p>
+							<p><sub style="font-weight:700">Now</sub>look forward to your appreciation</p>
 							<span></span>
 						</div>
 						
 						<div class="station s2">
-							<sub>2011</sub>
-							<p>Sr. Developer<br>Tencent Inc</p>
+							<p><sub>2011</sub>Sr. Developer<br>Tencent Inc</p>
 							<span></span>
 						</div>
 						
 						<div class="station s3">
-							<sub>2009</sub>
-							<p>Co-founder<br>Talentwalker</p>
+							<p><sub>2009</sub>Co-founder<br>Talentwalker</p>
 							<span></span>
 						</div>
 						
 						<div class="station s4">
-							<sub>2008</sub>
-							<p>Designer Microsoft</p>
+							<p><sub>2008</sub>Designer Microsoft</p>
 							<span></span>
 						</div>
 						
 						<div class="station s5">
-							<sub>2007</sub>
-							<p>Exchange Student<br>NTU Singapore</p>
+							<p><sub>2007</sub>Exchange Student<br>NTU Singapore</p>
 							<span></span>
 						</div>
 						
 						<div class="station s6">
-							<sub>2005</sub>
-							<p>Student<br>Peking Univ</p>
+							<p><sub>2005</sub>Student<br>Peking Univ</p>
 							<span></span>
 						</div>
 						
@@ -498,7 +492,7 @@ article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,sec
 				<h3 style="padding:50px 0px 0px 100px;">HONORS &amp; AWARDS:</h3>
 				<h3 style="padding-left:100px; font-size:14px; line-height: 20px">
 				Winning the champion in Google Open Social development competition of China.</br>
-				Winning 2rd place in “The Nodejs Code Jam” competition of China.<br>
+				Winning 2rd place in "The Nodejs Code Jam" competition of China.<br>
 				..
 				</h3>
 				
@@ -1285,11 +1279,13 @@ article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,sec
 		background: #fff;
 		top: 160px;
 		left: 50px;
+		-webkit-transition: all 200ms ease-in-out;
+		-moz-transition: all 200ms ease-in-out;
 		transition: all 200ms ease-in-out;
 	}
 
 	.subway .station{
-		-webkit-transition: all 2800ms ease-in-out;
+		-webkit-transition: all 200ms ease-in-out;
 		-moz-transition: all 200ms ease-in-out;
 		transition: all 200ms ease-in-out;
 		-webkit-transform: scale(.01,.01);
@@ -1311,15 +1307,22 @@ article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,sec
 		opacity: 1;
 	}
 	
-	.subway .station:hover{
-		top: 70px;
-	}
 	.subway .station p{
+		-webkit-transition: all 200ms ease-in-out;
+		-moz-transition: all 200ms ease-in-out;
+		transition: all 200ms ease-in-out;
 		line-height: 110%;
+	}
+	.subway .station:hover p {
+		/*top: 70px;*/
+		-webkit-transform: translate3d(0px,-10px,0px);
+		-moz-transform: translate3d(0px,-10px,0px);
+		transform: translate3d(0px,-10px,0px);
 	}
 	.subway .station sub{
 		font-size: 30px;
 		line-height: 110%;
+		display: block;
 	}
 	.subway .station span{
 		display: inline-block;
@@ -1328,10 +1331,6 @@ article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,sec
 		margin-top:20px;
 		background-color: #fff;
 		border-radius: 100%;
-		transition: all 200ms ease-in-out;
-	}
-	.subway .station:hover span{
-		margin-top:30px;
 	}
 	
 	.subway .s1{ left: 0px; top: 80px; }
